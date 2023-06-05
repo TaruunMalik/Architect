@@ -33,31 +33,31 @@ import CoverLayout from "layouts/authentication/components/CoverLayout";
 import bgImage from "assets/images/bg-sign-up-cover.jpeg";
 
 function Cover() {
+  // image={bgImage}
   return (
-    <CoverLayout image={bgImage}>
+    <CoverLayout>
+      <img
+        src={bgImage}
+        alt="logo"
+        style={{
+          width: "50px",
+
+          position: "absolute",
+          top: "3rem",
+          left: "50%",
+          transform: "translate(-50%,50%)",
+        }}
+      />
       <Card>
-        <MDBox
-          variant="gradient"
-          sx={{
-            color: "#fff",
-            backgroundColor: "#E93B77",
-          }}
-          borderRadius="lg"
-          coloredShadow="success"
-          mx={2}
-          mt={-3}
-          p={3}
-          mb={1}
-          textAlign="center"
-        >
-          <MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-            Join us today
+        <MDBox variant="gradient" borderRadius="lg" mx={2} mt={0} p={3} textAlign="center">
+          <MDTypography variant="h4" fontWeight="medium" color="black">
+            Register
           </MDTypography>
-          <MDTypography display="block" variant="button" color="white" my={1}>
+          <MDTypography display="block" variant="button" color="gray" my={1}>
             Enter your email and password to register
           </MDTypography>
         </MDBox>
-        <MDBox pt={4} pb={3} px={3}>
+        <MDBox pt={4} pb={3} px={3} mt={-4}>
           <MDBox component="form" role="form">
             <MDBox mb={2}>
               <MDInput type="text" label="Name" variant="standard" fullWidth />
@@ -102,7 +102,7 @@ function Cover() {
                 }}
                 fullWidth
               >
-                sign in
+                Register
               </MDButton>
             </MDBox>
             <MDBox mt={3} mb={1} textAlign="center">
@@ -117,7 +117,7 @@ function Cover() {
                   }}
                   fontWeight="medium"
                 >
-                  Sign In
+                  Login
                 </MDTypography>
               </MDTypography>
             </MDBox>

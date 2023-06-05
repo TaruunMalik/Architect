@@ -21,13 +21,13 @@ import { Link } from "react-router-dom";
 // @mui material components
 import Card from "@mui/material/Card";
 import Switch from "@mui/material/Switch";
-import Grid from "@mui/material/Grid";
-import MuiLink from "@mui/material/Link";
+// import Grid from "@mui/material/Grid";
+// import MuiLink from "@mui/material/Link";
 
 // @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import GoogleIcon from "@mui/icons-material/Google";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import GitHubIcon from "@mui/icons-material/GitHub";
+// import GoogleIcon from "@mui/icons-material/Google";
 
 // Material Dashboard 2 PRO React components
 import MDBox from "components/MDBox";
@@ -45,41 +45,56 @@ function Basic() {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
-
+  // image={bgImage}
   return (
-    <BasicLayout image={bgImage}>
-      <Card>
+    <BasicLayout>
+      <img
+        src={bgImage}
+        alt="logo"
+        style={{
+          width: "50px",
+
+          position: "absolute",
+          top: "3rem",
+          left: "50%",
+          transform: "translate(-50%,50%)",
+        }}
+      />
+      <Card sx={{ paddingX: "30px", fontFamily: "Roboto" }}>
         <MDBox
           variant="gradient"
-          sx={{ color: "#fff", backgroundColor: "#E93B77" }}
-          borderRadius="lg"
-          coloredShadow="info"
+          // sx={{ color: "#fff", backgroundColor: "#E93B77" }}
+          // borderRadius="lg"
+          // coloredShadow="info"
           mx={2}
-          mt={-3}
+          mt={0}
           p={2}
           mb={1}
           textAlign="center"
         >
-          <MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-            Sign in
+          <MDTypography variant="h4" fontWeight="medium" color="black" mt={1}>
+            Login
           </MDTypography>
-          <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
+          {/* <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
             <Grid item xs={2}>
               <MDTypography component={MuiLink} href="#" variant="body1" color="white">
                 <FacebookIcon color="inherit" />
               </MDTypography>
             </Grid>
             <Grid item xs={2}>
-              <MDTypography component={MuiLink} href="#" variant="body1" color="white">
+            <MDTypography component={MuiLink} href="#" variant="body1" color="white">
                 <GitHubIcon color="inherit" />
               </MDTypography>
-            </Grid>
-            <Grid item xs={2}>
+              </Grid>
+              <Grid item xs={2}>
               <MDTypography component={MuiLink} href="#" variant="body1" color="white">
                 <GoogleIcon color="inherit" />
               </MDTypography>
             </Grid>
-          </Grid>
+          </Grid> */}
+          <MDTypography sx={{ fontSize: "15px" }} fontWeight="medium" color="gray" mt={1}>
+            Access to our dashboard
+          </MDTypography>
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
@@ -113,7 +128,7 @@ function Basic() {
                 }}
                 fullWidth
               >
-                sign in
+                Login
               </MDButton>
             </MDBox>
             <MDBox mt={3} mb={1} textAlign="center">
@@ -126,7 +141,7 @@ function Basic() {
                   sx={{ color: "#E93B77" }}
                   fontWeight="medium"
                 >
-                  Sign up
+                  Register
                 </MDTypography>
               </MDTypography>
             </MDBox>
